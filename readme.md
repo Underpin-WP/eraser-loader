@@ -18,15 +18,14 @@ Underpin, it should work as-expected.
 ## Setup
 
 1. Install Underpin. See [Underpin Docs](https://www.github.com/underpin-wp/underpin)
-1. Register new custom post types menus as-needed.
+1. Register new erasers menus as-needed.
 
 ## Example
 
-A very basic example could look something like this. Note that your custom Post Type will not display unless registered in Javascript
-as well.
+A very basic example could look something like this.
 
 ```php
-// Register custom Post Type
+// Register eraser
 underpin()->erasers()->add( 'eraser', [
 	'id'                  => 'example-eraser',                      // required
 	'name'                => __( 'translate-able name', 'domain' ), // required
@@ -38,5 +37,5 @@ underpin()->erasers()->add( 'eraser', [
 Alternatively, you can extend `Eraser` and reference the extended class directly, like so:
 
 ```php
-underpin()->erasers()->add('custom-post-type-key','Namespace\To\Class');
+underpin()->erasers()->add('eraser-key','Namespace\To\Class');
 ```
