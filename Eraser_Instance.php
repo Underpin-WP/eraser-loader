@@ -23,11 +23,11 @@ class Eraser_Instance extends Eraser {
 	}
 
 	public function erase_item( $item ) {
-		$this->set_callable( $this->erase_item_callback, $item );
+		return $this->set_callable( $this->erase_item_callback, $item );
 	}
 
 	public function get_items( $email, $page ) {
-		$this->set_callable( $this->get_items_callback, $email, $page );
+		return $this->set_callable( $this->get_items_callback, $email, $page );
 	}
 
 }
