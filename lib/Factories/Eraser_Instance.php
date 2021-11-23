@@ -1,10 +1,10 @@
 <?php
 
-namespace Underpin_Erasers\Factories;
+namespace Underpin\Erasers\Factories;
 
 
 use Underpin\Traits\Instance_Setter;
-use Underpin_Erasers\Abstracts\Eraser;
+use Underpin\Erasers\Abstracts\Eraser;
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;

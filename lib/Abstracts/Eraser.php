@@ -7,10 +7,11 @@
  */
 
 
-namespace Underpin_Erasers\Abstracts;
+namespace Underpin\Erasers\Abstracts;
 
+use Underpin\Loaders\Logger;
 use Underpin\Traits\Feature_Extension;
-use function Underpin\underpin;
+
 
 if ( ! defined( 'ABSPATH' ) ) {
 	exit;
@@ -48,7 +49,7 @@ abstract class Eraser {
 	public function do_actions() {
 		add_filter( 'wp_privacy_personal_data_erasers', [ $this, 'register_eraser' ] );
 
-		underpin()->logger()->log(
+		Logger::log(
 			'notice',
 			'eraser_added',
 			'An eraser has been added',
