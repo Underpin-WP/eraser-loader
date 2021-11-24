@@ -8,6 +8,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 // Add this loader.
 Underpin::attach( 'setup', new \Underpin\Factories\Observers\Loader( 'erasers', [
-	'instance' => 'Underpin\Erasers\Abstracts\Eraser',
-	'default'  => 'Underpin\Erasers\Factories\Eraser_Instance',
+	'abstraction_class' => 'Underpin\Erasers\Abstracts\Eraser',
+	'default_factory'  => 'Underpin\Erasers\Factories\Eraser_Instance',
 ] ) );
